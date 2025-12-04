@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Management</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <button class="back-btn" onclick="window.location.href='index.html'">⬅ Back</button>
+
+  <h1>Book Management</h1>
+
+  <!-- Add Book Form -->
+  <section class="form-section">
+    <h2>Add Book</h2>
+
+    <input type="text" id="title" placeholder="Book Title">
+    <input type="text" id="author" placeholder="Author">
+
+    <select id="category">
+      <option value="Fiction">Fiction</option>
+      <option value="Comedy">Comedy</option>
+      <option value="Technical">Technical</option>
+    </select>
+
+    <button onclick="addBook()">Add Book</button>
+  </section>
+
+  <!-- Sort Controls -->
+  <section class="controls">
+    <button onclick="sortAZ()">Sort Title A → Z</button>
+    <button onclick="sortZA()">Sort Title Z → A</button>
+
+    <select id="filter" onchange="filterBooks()">
+      <option value="All">All</option>
+      <option value="Fiction">Fiction</option>
+      <option value="Comedy">Comedy</option>
+      <option value="Technical">Technical</option>
+    </select>
+  </section>
+
+  <!-- Books Display Grid -->
+  <div id="bookContainer" class="grid"></div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
